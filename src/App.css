@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  position: sticky;
+  top: 0;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px 15px 5px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.144);
+  filter: blur(0.4px);
+  z-index: 1;
+  background-color: white;
+}
+
+.logo-icon {
+  margin-right: 20px;
+}
+
+.nav-dark {
+  background-color: rgb(0, 0, 0);
+}
+
+.container-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  padding: 10px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: rgb(33, 16, 75);
+  transition: 200ms;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.link-dark {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 200ms;
+  border-radius: 3px;
+}
+
+#link-2 {
+  margin-right: 20px;
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 400ms;
+  cursor: pointer;
+  padding: 5px 5px 5px 20px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 4px;
+}
+
+.user-name {
+  font-size: 0.7em;
+  opacity: 70%;
+}
+
+.profile-picture {
+  border: 3px solid rgb(77, 57, 168);
+  border-radius: 50%;
+}
+
+
+/*----------------- Nav Hovers -----------------*/
+
+
+
+.link:hover {
+  background-color: rgb(40, 13, 75);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.link-dark:hover {
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-data:hover {
+  /*box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.151);*/
+  box-shadow: inset 110px 0px rgb(48, 207, 235);
+}
+
+
+
+/*----------------- Login CSS -----------------*/
+
+
+
+.login-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(0, 153, 255), rgb(0, 102, 255));
+  background-size: cover;
+}
+
+.login-container {
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.144);
+  background-color: rgb(255, 255, 255);
+}
+
+.login-title {
+  margin: 30px 0px 0px 0px;
+  font-size: 1.3em;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  color: rgb(43, 11, 80);
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 250px;
+  width: 300px;
+}
+
+.login-label {
+  align-self: flex-start;
+  font-size: 0.8em;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 5px 0px 5px 0px;
+  font-weight: bold;
+  color: rgb(40, 13, 75);
+}
+
+form input {
+  font-size: 0.7em;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  padding: 0px 10px 0px 10px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.096);
+  cursor: text;
+  font-family: 'Roboto Mono', monospace;
+  color: rgb(40, 13, 75);
+}
+
+form p {
+  opacity: 70%;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+form button, .google-login-btn {
+  margin: 10px 0px 10px  0px;
+  font-weight: bold;
+  color: rgb(40, 13, 75);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 200ms;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.13);
+}
+
+
+.google-login-btn {
+  margin: 0;
+  display: flex;
+  background-color: rgb(255, 98, 36);
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-logo {
+  margin-left: 15px;
+  background-color: white;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+
+
+/*----------------- Hover Login CSS -----------------*/
+
+
+
+form button:hover {
+  background-color: rgb(39, 11, 77);
+  color: white;
+}
+
+.google-login-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
