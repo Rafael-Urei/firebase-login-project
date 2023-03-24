@@ -67,16 +67,30 @@ nav {
 .user-data {
   display: flex;
   align-items: center;
-  gap: 15px;
   transition: 400ms;
   cursor: pointer;
   padding: 5px 5px 5px 20px;
   font-family: 'Roboto Mono', monospace;
   border-radius: 4px;
+  text-align: center;
+}
+
+.user-data p {
+  font-size: 0.7rem;
+  width: 100px;
+  transition: 200ms;
+}
+
+.user-data p:hover {
+  scale: 1.1;
 }
 
 .user-name {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
   font-size: 0.7em;
+  padding-right: 5px;
   opacity: 70%;
 }
 
@@ -98,11 +112,6 @@ nav {
 .link-dark:hover {
   background-color: white;
   color: black;
-}
-
-.user-data:hover {
-  /*box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.151);*/
-  box-shadow: inset 110px 0px rgb(48, 207, 235);
 }
 
 
@@ -172,6 +181,10 @@ form input {
   color: rgb(40, 13, 75);
 }
 
+form input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
 form p {
   opacity: 70%;
   font-size: 0.7em;
@@ -222,4 +235,105 @@ form button:hover {
 .google-login-btn:hover {
   background-color: rgb(255, 255, 255);
   color: black;
+}
+
+
+
+/*----------------- Main CSS -----------------*/
+
+.main-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(247, 245, 253);
+}
+
+.circles-container {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-left: 30px;
+}
+
+.circles-container h1 {
+  z-index: 1;
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  color: white;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  filter: blur(40px);
+  transition: 1s;
+}
+
+#circle-1 {
+  background-color: #f0e292;
+  position: absolute;
+  animation-name: rotate1;
+  animation-delay: 2s;
+}
+
+#circle-2 {
+  background-color: #9765af;
+  position: absolute;
+  animation-name: rotate1;
+  animation-delay: 4s;
+}
+
+#circle-3 {
+  background-color: #bd5781;
+  position: absolute;
+  animation-name: rotate1;
+  animation-delay: 6s;
+}
+
+/*----------------- Keyframes CSS -----------------*/
+
+
+
+@keyframes rotate1 {
+  0% { top: 0px; left: 0px; }
+
+  25% { top: 100px; left: 0px; }
+
+  50% { top: 100px; left: 100px; }
+
+  75% { top: 0px; left: 100px; }
+
+  100% { top: 0px; left: 0px; }
+}
+
+@keyframes rotate2 {
+  0% { top: 0px; left: 0px; }
+
+  25% { top: 100px; left: 0px; }
+
+  50% { top: 100px; left: 100px; }
+
+  75% { top: 0px; left: 100px; }
+
+  100% { top: 0px; left: 0px; }
+}
+
+@keyframes rotate3 {
+  0% { top: 0px; left: 0px; }
+
+  25% { top: 100px; left: 0px; }
+
+  50% { top: 100px; left: 100px; }
+
+  75% { top: 0px; left: 100px; }
+
+  100% { top: 0px; left: 0px; }
 }

@@ -22,9 +22,9 @@ export const Login = () =>  {
                 <h1 className='login-title'>Login</h1>
                 <form action="submit" onSubmit={preventEvent}>
                     <label className='login-label'>Username:</label>
-                    <input type="text" name='user' placeholder='Your Name' autoComplete='no'/>
+                    <input type="text" name='user' placeholder='e.g Janne Appleseed' autoComplete='no'/>
                     <label className='login-label'>Password:</label>
-                    <input type='password' name='password' placeholder='Your Password'/>
+                    <input type='password' name='password' placeholder='e.g yourName1237694'/>
                     <button>Sign in</button>
                     <p>Or Sign In With Google</p>
                     <button
